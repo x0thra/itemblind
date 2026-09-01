@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "itemblind",
+  "version": "${version}",
+  "name": "ItemBlind",
+  "description": "Client-side item filtering mod that ignores or immediately drops unwanted ground items.",
+  "authors": [
+    "ItemBlind"
+  ],
+  "contact": {
+    "homepage": "https://github.com/itemblind/itemblind",
+    "sources": "https://github.com/itemblind/itemblind"
+  },
+  "license": "MIT",
+  "icon": "assets/itemblind/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.itemblind.ItemBlindClient"
+    ],
+    "modmenu": [
+      "com.itemblind.integration.ModMenuIntegration"
+    ]
+  },
+  "mixins": [
+    "itemblind.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "minecraft": "~${minecraft_version}",
+    "java": ">=21"
+  },
+  "suggests": {
+    "modmenu": "*"
+  }
+}
